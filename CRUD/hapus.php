@@ -1,0 +1,18 @@
+<?php
+require "functions.php";
+
+$id = $_GET['id'];
+
+$query = "DELETE FROM siswa01 WHERE id = '$id'";
+$result = mysqli_query($conn, $query);
+
+if($result){
+    header("location:index.php?sukses");
+}else{
+    header("location:index.php?gagal");
+}
+
+die();
+
+
+?>
